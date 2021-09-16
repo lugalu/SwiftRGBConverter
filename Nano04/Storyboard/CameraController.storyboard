@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="95C-L4-aSm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Color Picker-->
+        <scene sceneID="Ppa-c7-hcj">
+            <objects>
+                <navigationController storyboardIdentifier="CameraController" id="95C-L4-aSm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Image Color Picker" image="eyedropper" catalog="system" id="FNK-ep-wib"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCx-3G-ldP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vc7-bD-WkC" kind="relationship" relationship="rootViewController" id="mTR-bo-88b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kb6-Jk-M30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2171" y="-113"/>
+        </scene>
+        <!--Image Color Picker-->
+        <scene sceneID="FvX-Fq-p5L">
+            <objects>
+                <viewController storyboardIdentifier="imagePreview" id="Vc7-bD-WkC" customClass="ColorPickerViewController" customModule="Nano04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wDm-hX-qyg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-De-1pA">
+                                <rect key="frame" x="304" y="803" width="86" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="127:48" id="Umv-dd-sCn"/>
+                                    <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="43:15" priority="750" id="eNH-xX-REv"/>
+                                </constraints>
+                                <state key="normal" title="Open Galery"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Umv-dd-sCn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Umv-dd-sCn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onGaleryTap" destination="Vc7-bD-WkC" eventType="touchUpInside" id="oVw-qx-rGj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-DG-7fl">
+                                <rect key="frame" x="20" y="803" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="127:48" id="1TC-4u-VKO"/>
+                                    <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="19:6" priority="750" id="T5I-sC-KdG"/>
+                                </constraints>
+                                <state key="normal" title="Open Camera"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1TC-4u-VKO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1TC-4u-VKO"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onCameraTap" destination="Vc7-bD-WkC" eventType="touchUpInside" id="EGT-gc-UQE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-Py-nt1">
+                                <rect key="frame" x="24" y="192" width="376" height="501.5"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kCK-Py-nt1" secondAttribute="height" multiplier="641:300" priority="750" id="PTY-7n-8Nm"/>
+                                    <constraint firstAttribute="width" secondItem="kCK-Py-nt1" secondAttribute="height" multiplier="637:261" priority="750" id="oue-ln-rZ4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PTY-7n-8Nm"/>
+                                        <exclude reference="oue-ln-rZ4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="PTY-7n-8Nm"/>
+                                        <include reference="oue-ln-rZ4"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NsX-3z-n5t" appends="YES" id="wcw-Ry-Dqr"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OZI-xr-dlV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="OZI-xr-dlV" secondAttribute="leading" constant="20" id="4SU-i0-4Id"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="7.5" id="4Uw-fW-y9h"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="17" id="4ix-8D-KMX"/>
+                            <constraint firstItem="x2c-De-1pA" firstAttribute="trailing" secondItem="lr8-DG-7fl" secondAttribute="trailing" id="9dv-jb-qZc"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="16" id="Dat-Mc-XnL"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="height" secondItem="wDm-hX-qyg" secondAttribute="height" multiplier="0.630435" id="F6q-bI-PXB"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="height" secondItem="wDm-hX-qyg" secondAttribute="height" multiplier="0.724638" id="FbL-HQ-0Am"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="lr8-DG-7fl" secondAttribute="bottom" constant="160" id="GYa-ZC-bVl"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="kCK-Py-nt1" secondAttribute="bottom" constant="27" id="Ivw-eN-EN8"/>
+                            <constraint firstItem="x2c-De-1pA" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="17" id="KrX-SW-qmu"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="57" id="LFh-gX-Vh9"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="lr8-DG-7fl" secondAttribute="bottom" constant="159" id="M5x-Hj-Vi5"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="24" id="Nhd-Fr-IW0"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="8" symbolic="YES" id="PCK-Va-Rlh"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" constant="104" id="UXc-ur-usI"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="14" id="Vjc-Ji-IQX"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="height" secondItem="wDm-hX-qyg" secondAttribute="height" multiplier="0.55971" id="XUK-dR-ufQ"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="centerY" secondItem="OZI-xr-dlV" secondAttribute="centerY" id="aEN-Id-sAS"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="151" id="agE-yy-Mtc"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="kCK-Py-nt1" secondAttribute="bottom" id="b1k-sK-Den"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="lr8-DG-7fl" secondAttribute="trailing" constant="16" id="dar-5b-y42"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="29" id="dzD-zS-948"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" id="exL-Y5-Ib3"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="lr8-DG-7fl" secondAttribute="trailing" constant="48" id="eyq-6L-vew"/>
+                            <constraint firstItem="x2c-De-1pA" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="8" symbolic="YES" id="oEb-r7-rAc"/>
+                            <constraint firstItem="x2c-De-1pA" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" constant="60" id="oGR-de-Nwf"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="8" symbolic="YES" id="oK0-8N-xkf"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="8" symbolic="YES" id="sT5-uc-Yzx"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="lr8-DG-7fl" secondAttribute="bottom" constant="29" id="xl6-kZ-q94"/>
+                            <constraint firstItem="kCK-Py-nt1" firstAttribute="width" secondItem="wDm-hX-qyg" secondAttribute="width" multiplier="0.908213" id="y1w-pO-YTs"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="8" symbolic="YES" id="yLY-Do-esz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dat-Mc-XnL"/>
+                                <exclude reference="LFh-gX-Vh9"/>
+                                <exclude reference="b1k-sK-Den"/>
+                                <exclude reference="GYa-ZC-bVl"/>
+                                <exclude reference="eyq-6L-vew"/>
+                                <exclude reference="M5x-Hj-Vi5"/>
+                                <exclude reference="dar-5b-y42"/>
+                                <exclude reference="Ivw-eN-EN8"/>
+                                <exclude reference="agE-yy-Mtc"/>
+                                <exclude reference="aEN-Id-sAS"/>
+                                <exclude reference="exL-Y5-Ib3"/>
+                                <exclude reference="FbL-HQ-0Am"/>
+                                <exclude reference="F6q-bI-PXB"/>
+                                <exclude reference="4ix-8D-KMX"/>
+                                <exclude reference="PCK-Va-Rlh"/>
+                                <exclude reference="yLY-Do-esz"/>
+                                <exclude reference="4Uw-fW-y9h"/>
+                                <exclude reference="sT5-uc-Yzx"/>
+                                <exclude reference="oK0-8N-xkf"/>
+                                <exclude reference="9dv-jb-qZc"/>
+                                <exclude reference="KrX-SW-qmu"/>
+                                <exclude reference="oGR-de-Nwf"/>
+                                <exclude reference="oEb-r7-rAc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Dat-Mc-XnL"/>
+                                <exclude reference="Nhd-Fr-IW0"/>
+                                <exclude reference="LFh-gX-Vh9"/>
+                                <exclude reference="b1k-sK-Den"/>
+                                <include reference="GYa-ZC-bVl"/>
+                                <exclude reference="xl6-kZ-q94"/>
+                                <exclude reference="eyq-6L-vew"/>
+                                <exclude reference="M5x-Hj-Vi5"/>
+                                <exclude reference="dar-5b-y42"/>
+                                <include reference="Ivw-eN-EN8"/>
+                                <include reference="agE-yy-Mtc"/>
+                                <exclude reference="dzD-zS-948"/>
+                                <exclude reference="aEN-Id-sAS"/>
+                                <exclude reference="exL-Y5-Ib3"/>
+                                <exclude reference="FbL-HQ-0Am"/>
+                                <include reference="F6q-bI-PXB"/>
+                                <include reference="4ix-8D-KMX"/>
+                                <exclude reference="PCK-Va-Rlh"/>
+                                <exclude reference="yLY-Do-esz"/>
+                                <exclude reference="4Uw-fW-y9h"/>
+                                <exclude reference="sT5-uc-Yzx"/>
+                                <exclude reference="4SU-i0-4Id"/>
+                                <include reference="oK0-8N-xkf"/>
+                                <include reference="9dv-jb-qZc"/>
+                                <include reference="KrX-SW-qmu"/>
+                                <include reference="oGR-de-Nwf"/>
+                                <exclude reference="oEb-r7-rAc"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Lw2-ah-DWV" appends="YES" id="7ch-jv-nDd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Color Picker" id="exv-uQ-Xef"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="lr8-DG-7fl" id="LjW-0c-C75"/>
+                        <outlet property="galeryButton" destination="x2c-De-1pA" id="tIG-Mp-FPE"/>
+                        <outlet property="imageView" destination="kCK-Py-nt1" id="NsR-Qk-xxj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtl-NS-PPj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Lw2-ah-DWV"/>
+                <tapGestureRecognizer id="NsX-3z-n5t">
+                    <connections>
+                        <action selector="tap:" destination="Vc7-bD-WkC" id="LXj-LQ-x1y"/>
+                        <outlet property="delegate" destination="wDm-hX-qyg" id="7Vl-Bg-qWv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1263.768115942029" y="-114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eyedropper" catalog="system" width="128" height="119"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

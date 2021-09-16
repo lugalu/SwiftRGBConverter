@@ -17,70 +17,70 @@ extension TextFieldHandler{
         
         switch sender {
         case rgb1[0]:
-            let r = stringToDouble(value: rText)
-            let g = stringToDouble(value: gText)
-            let b = stringToDouble(value: bText)
+            let r = ColorConverter.stringToDouble(rText)
+            let g = ColorConverter.stringToDouble(gText)
+            let b = ColorConverter.stringToDouble(bText)
             
-            let r255 = rgb1to255(r)
-            let g255 = rgb1to255(g)
-            let b255 = rgb1to255(b)
+            let r255 = ColorConverter.rgb1to255(r)
+            let g255 = ColorConverter.rgb1to255(g)
+            let b255 = ColorConverter.rgb1to255(b)
             
-            let rHex = numberToHex(value: r255)
+            let rHex = ColorConverter.numberToHex(value: r255)
             
-            let cmykValue = rgb255ToCMKY(r: r255, g: g255, b: b255)
+            let cmykValue = ColorConverter.rgb255ToCMYK(r: r255, g: g255, b: b255)
             
             assignR255(index: 0, value: r255)
             assignHex(index: 0, value: rHex)
             assignCMYK(cmykValue)
             
         case rgb1[1]:
-            let r = stringToDouble(value: rText)
-            let g = stringToDouble(value: gText)
-            let b = stringToDouble(value: bText)
+            let r = ColorConverter.stringToDouble(rText)
+            let g = ColorConverter.stringToDouble(gText)
+            let b = ColorConverter.stringToDouble(bText)
             
-            let r255 = rgb1to255(r)
-            let g255 = rgb1to255(g)
-            let b255 = rgb1to255(b)
+            let r255 = ColorConverter.rgb1to255(r)
+            let g255 = ColorConverter.rgb1to255(g)
+            let b255 = ColorConverter.rgb1to255(b)
             
-            let gHex = numberToHex(value: g255)
+            let gHex = ColorConverter.numberToHex(value: g255)
             
-            let cmykValue = rgb255ToCMKY(r: r255, g: g255, b: b255)
+            let cmykValue = ColorConverter.rgb255ToCMYK(r: r255, g: g255, b: b255)
             
             assignR255(index: 1, value: g255)
             assignHex(index: 1, value: gHex)
             assignCMYK(cmykValue)
             
         case rgb1[2]:
-            let r = stringToDouble(value: rText)
-            let g = stringToDouble(value: gText)
-            let b = stringToDouble(value: bText)
+            let r = ColorConverter.stringToDouble(rText)
+            let g = ColorConverter.stringToDouble(gText)
+            let b = ColorConverter.stringToDouble(bText)
             
-            let r255 = rgb1to255(r)
-            let g255 = rgb1to255(g)
-            let b255 = rgb1to255(b)
+            let r255 = ColorConverter.rgb1to255(r)
+            let g255 = ColorConverter.rgb1to255(g)
+            let b255 = ColorConverter.rgb1to255(b)
             
-            let bHex = numberToHex(value: r255)
+            let bHex = ColorConverter.numberToHex(value: r255)
             
-            let cmykValue = rgb255ToCMKY(r: r255, g: g255, b: b255)
+            let cmykValue = ColorConverter.rgb255ToCMYK(r: r255, g: g255, b: b255)
             
             assignR255(index: 2, value: b255)
             assignHex(index: 0, value: bHex)
             assignCMYK(cmykValue)
             
         case rgb1[3]:
-            let r = stringToDouble(value: rText)
-            let g = stringToDouble(value: gText)
-            let b = stringToDouble(value: bText)
-            let a = stringToDouble(value: aText)
+            let r = ColorConverter.stringToDouble(rText)
+            let g = ColorConverter.stringToDouble(gText)
+            let b = ColorConverter.stringToDouble(bText)
+            let a = ColorConverter.stringToDouble(aText)
             
-            let r255 = rgb1to255(r)
-            let g255 = rgb1to255(g)
-            let b255 = rgb1to255(b)
-            let a255 = rgb1to255(a)
+            let r255 = ColorConverter.rgb1to255(r)
+            let g255 = ColorConverter.rgb1to255(g)
+            let b255 = ColorConverter.rgb1to255(b)
+            let a255 = ColorConverter.rgb1to255(a)
             
-            let aHex = numberToHex(value: a255)
+            let aHex = ColorConverter.numberToHex(value: a255)
             
-            let cmykValue = rgb255ToCMKY(r: r255, g: g255, b: b255)
+            let cmykValue = ColorConverter.rgb255ToCMYK(r: r255, g: g255, b: b255)
             
             assignR255(index: 3, value: a255)
             assignHex(index: 3, value: aHex)
@@ -91,17 +91,9 @@ extension TextFieldHandler{
         colorDelegate?.updateColorViewer()
     }
     
-    func stringToDouble(value: String) -> Double{
-        let result = Double(value) ?? 0.0
-        return result
-    }
-    
     func assignR1(index i: Int, value: Double){
         rgb1[i].text = String(value)
 
     }
-    
-    func rgb1to255(_ value: Double) -> Int{
-        return Int(value * 255)
-    }
+ 
 }
