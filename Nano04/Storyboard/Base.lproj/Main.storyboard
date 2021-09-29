@@ -362,42 +362,6 @@
             </objects>
             <point key="canvasLocation" x="-2171" y="-431"/>
         </scene>
-        <!--Camera View Controller-->
-        <scene sceneID="7Wl-oX-YPb">
-            <objects>
-                <viewController storyboardIdentifier="CameraVC" id="iej-Ng-zwF" customClass="CameraViewController" customModule="Nano04" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sFW-yl-ziT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEU-e6-IxO">
-                                <rect key="frame" x="20" y="811" width="374" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VEU-e6-IxO" secondAttribute="height" multiplier="22:3" priority="750" id="jb7-PC-Ygt"/>
-                                </constraints>
-                                <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <action selector="takePhoto" destination="iej-Ng-zwF" eventType="touchUpInside" id="ULT-V4-Zih"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="LSC-eK-pqX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="VEU-e6-IxO" firstAttribute="centerX" secondItem="LSC-eK-pqX" secondAttribute="centerX" id="bSb-Xm-SQB"/>
-                            <constraint firstItem="VEU-e6-IxO" firstAttribute="height" secondItem="sFW-yl-ziT" secondAttribute="height" multiplier="0.0569196" id="n04-gt-Obn"/>
-                            <constraint firstItem="VEU-e6-IxO" firstAttribute="bottom" secondItem="LSC-eK-pqX" secondAttribute="bottom" id="zzr-EB-dNl"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="0Nt-eN-gwk"/>
-                    <connections>
-                        <outlet property="photoBtn" destination="VEU-e6-IxO" id="PLF-2o-gdk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m66-qi-ULn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-299" y="-108"/>
-        </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>

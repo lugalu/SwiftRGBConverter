@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0978924726F81E2B007540F6 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978924626F81E2B007540F6 /* ImageView.swift */; };
 		0995E71726F2CDE6004700A3 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995E71626F2CDE6004700A3 /* ColorConverter.swift */; };
 		0995E71926F2D8EA004700A3 /* CameraController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0995E71826F2D8EA004700A3 /* CameraController.storyboard */; };
 		09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8945F26C44EF300055E9E /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0978924626F81E2B007540F6 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		0995E71626F2CDE6004700A3 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		0995E71826F2D8EA004700A3 /* CameraController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraController.storyboard; sourceTree = "<group>"; };
 		09F8945C26C44EF300055E9E /* Nano04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano04.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,23 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		0988A6A72703F47600D6860A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				09FBE51126CEDC7D00C60CD4 /* ColorUpdater.swift */,
+				0995E71626F2CDE6004700A3 /* ColorConverter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0988A6A82703F51200D6860A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0978924626F81E2B007540F6 /* ImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		09F8945326C44EF300055E9E = {
 			isa = PBXGroup;
 			children = (
@@ -108,14 +127,14 @@
 		09F8945E26C44EF300055E9E /* Nano04 */ = {
 			isa = PBXGroup;
 			children = (
+				0988A6A72703F47600D6860A /* Helpers */,
 				090D5EC526F227CB00EA5BD4 /* Delegate */,
 				090D5EC426F227B600EA5BD4 /* Controllers */,
 				090D5EC626F227E300EA5BD4 /* Storyboard */,
 				09FBE50C26CA9F3700C60CD4 /* TextField */,
-				09FBE51126CEDC7D00C60CD4 /* ColorUpdater.swift */,
+				0988A6A82703F51200D6860A /* Views */,
 				09F8946826C44EF400055E9E /* Assets.xcassets */,
 				09F8946D26C44EF400055E9E /* Info.plist */,
-				0995E71626F2CDE6004700A3 /* ColorConverter.swift */,
 			);
 			path = Nano04;
 			sourceTree = "<group>";
@@ -209,6 +228,7 @@
 				09FBE50E26CED64E00C60CD4 /* ColorPickerViewController.swift in Sources */,
 				09FBE50126C6EC0D00C60CD4 /* ViewController.swift in Sources */,
 				09FBE50926CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift in Sources */,
+				0978924726F81E2B007540F6 /* ImageView.swift in Sources */,
 				09FBE51626CEF7C500C60CD4 /* CameraViewController.swift in Sources */,
 				09FBE50726CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift in Sources */,
 				09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */,

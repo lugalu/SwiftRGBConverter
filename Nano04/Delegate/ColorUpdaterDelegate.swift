@@ -10,4 +10,5 @@ import UIKit
 protocol ColorUpdaterDelegate {
     func updateColorViewer()
     func updateColorViewer(color: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat))
+    func updateColorViewer(color: UIColor)
 }

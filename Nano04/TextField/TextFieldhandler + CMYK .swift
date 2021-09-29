@@ -55,9 +55,9 @@ extension TextFieldHandler{
     }
     
     func assignCMYK(_ values: (c: Double, m: Double, y: Double, k: Double), _: Bool ){
-        cmky[0].text = String(values.c * 100.0)
-        cmky[1].text = String(values.m * 100.0)
-        cmky[2].text = String(values.y * 100.0)
-        cmky[3].text = String(values.k * 100.0)
+        cmky[0].text = String(format: "%.4f", values.c * 100.0)
+        cmky[1].text = String(format: "%.4f", values.m * 100.0)
+        cmky[2].text = String(format: "%.4f", values.y * 100.0)
+        cmky[3].text = String(format: "%.4f", values.k * 100.0)
     }
 }

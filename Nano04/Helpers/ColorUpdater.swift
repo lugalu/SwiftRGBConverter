@@ -23,6 +23,10 @@ class ColorUpdater: UIView{
                                        alpha: textToCG(color.a))
     }
     
+    func updateColor(color: UIColor){
+        self.backgroundColor = color
+    }
+    
     private func textToCG(_ value: String?) -> CGFloat{
         return CGFloat(Float(Int(value ?? "0") ?? 0) / 255)
     }

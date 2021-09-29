@@ -39,7 +39,9 @@ class ViewController: UIViewController, ColorUpdaterDelegate {
         colorViewer.updateColor(color:(r: color.r, g: color.g, b: color.b, a: color.a))
     }
     
-    
+    func updateColorViewer(color: UIColor) {
+        colorViewer.updateColor(color: color)
+    }
     
 }
 

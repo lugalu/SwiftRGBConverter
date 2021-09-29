@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="95C-L4-aSm">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="95C-L4-aSm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,11 +29,11 @@
             <objects>
                 <viewController storyboardIdentifier="imagePreview" id="Vc7-bD-WkC" customClass="ColorPickerViewController" customModule="Nano04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDm-hX-qyg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-De-1pA">
-                                <rect key="frame" x="304" y="803" width="86" height="30"/>
+                                <rect key="frame" x="490" y="541" width="86" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="127:48" id="Umv-dd-sCn"/>
                                     <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="43:15" priority="750" id="eNH-xX-REv"/>
@@ -55,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-DG-7fl">
-                                <rect key="frame" x="20" y="803" width="95" height="30"/>
+                                <rect key="frame" x="20" y="541" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="127:48" id="1TC-4u-VKO"/>
                                     <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="19:6" priority="750" id="T5I-sC-KdG"/>
@@ -75,8 +74,8 @@
                                     <action selector="onCameraTap" destination="Vc7-bD-WkC" eventType="touchUpInside" id="EGT-gc-UQE"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-Py-nt1">
-                                <rect key="frame" x="24" y="192" width="376" height="501.5"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-Py-nt1" customClass="ImageView" customModule="Nano04" customModuleProvider="target">
+                                <rect key="frame" x="41" y="148" width="545" height="336"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -95,9 +94,6 @@
                                         <include reference="oue-ln-rZ4"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="NsX-3z-n5t" appends="YES" id="wcw-Ry-Dqr"/>
-                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OZI-xr-dlV"/>
@@ -139,64 +135,61 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Dat-Mc-XnL"/>
-                                <exclude reference="LFh-gX-Vh9"/>
-                                <exclude reference="b1k-sK-Den"/>
                                 <exclude reference="GYa-ZC-bVl"/>
-                                <exclude reference="eyq-6L-vew"/>
-                                <exclude reference="M5x-Hj-Vi5"/>
-                                <exclude reference="dar-5b-y42"/>
                                 <exclude reference="Ivw-eN-EN8"/>
+                                <exclude reference="LFh-gX-Vh9"/>
+                                <exclude reference="M5x-Hj-Vi5"/>
                                 <exclude reference="agE-yy-Mtc"/>
+                                <exclude reference="b1k-sK-Den"/>
+                                <exclude reference="dar-5b-y42"/>
+                                <exclude reference="eyq-6L-vew"/>
+                                <exclude reference="F6q-bI-PXB"/>
+                                <exclude reference="FbL-HQ-0Am"/>
                                 <exclude reference="aEN-Id-sAS"/>
                                 <exclude reference="exL-Y5-Ib3"/>
-                                <exclude reference="FbL-HQ-0Am"/>
-                                <exclude reference="F6q-bI-PXB"/>
+                                <exclude reference="4Uw-fW-y9h"/>
                                 <exclude reference="4ix-8D-KMX"/>
                                 <exclude reference="PCK-Va-Rlh"/>
-                                <exclude reference="yLY-Do-esz"/>
-                                <exclude reference="4Uw-fW-y9h"/>
-                                <exclude reference="sT5-uc-Yzx"/>
                                 <exclude reference="oK0-8N-xkf"/>
+                                <exclude reference="sT5-uc-Yzx"/>
+                                <exclude reference="yLY-Do-esz"/>
                                 <exclude reference="9dv-jb-qZc"/>
                                 <exclude reference="KrX-SW-qmu"/>
-                                <exclude reference="oGR-de-Nwf"/>
                                 <exclude reference="oEb-r7-rAc"/>
+                                <exclude reference="oGR-de-Nwf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <exclude reference="Dat-Mc-XnL"/>
-                                <exclude reference="Nhd-Fr-IW0"/>
-                                <exclude reference="LFh-gX-Vh9"/>
-                                <exclude reference="b1k-sK-Den"/>
                                 <include reference="GYa-ZC-bVl"/>
-                                <exclude reference="xl6-kZ-q94"/>
-                                <exclude reference="eyq-6L-vew"/>
-                                <exclude reference="M5x-Hj-Vi5"/>
-                                <exclude reference="dar-5b-y42"/>
                                 <include reference="Ivw-eN-EN8"/>
+                                <exclude reference="LFh-gX-Vh9"/>
+                                <exclude reference="M5x-Hj-Vi5"/>
+                                <exclude reference="Nhd-Fr-IW0"/>
                                 <include reference="agE-yy-Mtc"/>
+                                <exclude reference="b1k-sK-Den"/>
+                                <exclude reference="dar-5b-y42"/>
                                 <exclude reference="dzD-zS-948"/>
+                                <exclude reference="eyq-6L-vew"/>
+                                <exclude reference="xl6-kZ-q94"/>
+                                <include reference="F6q-bI-PXB"/>
+                                <exclude reference="FbL-HQ-0Am"/>
                                 <exclude reference="aEN-Id-sAS"/>
                                 <exclude reference="exL-Y5-Ib3"/>
-                                <exclude reference="FbL-HQ-0Am"/>
-                                <include reference="F6q-bI-PXB"/>
+                                <exclude reference="4SU-i0-4Id"/>
+                                <exclude reference="4Uw-fW-y9h"/>
                                 <include reference="4ix-8D-KMX"/>
                                 <exclude reference="PCK-Va-Rlh"/>
-                                <exclude reference="yLY-Do-esz"/>
-                                <exclude reference="4Uw-fW-y9h"/>
-                                <exclude reference="sT5-uc-Yzx"/>
-                                <exclude reference="4SU-i0-4Id"/>
                                 <include reference="oK0-8N-xkf"/>
+                                <exclude reference="sT5-uc-Yzx"/>
+                                <exclude reference="yLY-Do-esz"/>
                                 <include reference="9dv-jb-qZc"/>
                                 <include reference="KrX-SW-qmu"/>
-                                <include reference="oGR-de-Nwf"/>
                                 <exclude reference="oEb-r7-rAc"/>
+                                <include reference="oGR-de-Nwf"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Lw2-ah-DWV" appends="YES" id="7ch-jv-nDd"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Image Color Picker" id="exv-uQ-Xef"/>
                     <connections>
@@ -210,11 +203,46 @@
                 <tapGestureRecognizer id="NsX-3z-n5t">
                     <connections>
                         <action selector="tap:" destination="Vc7-bD-WkC" id="LXj-LQ-x1y"/>
-                        <outlet property="delegate" destination="wDm-hX-qyg" id="7Vl-Bg-qWv"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1263.768115942029" y="-114.50892857142857"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="hRb-pF-rjR">
+            <objects>
+                <viewController storyboardIdentifier="CameraVC" id="wfb-xF-xea" customClass="CameraViewController" customModule="Nano04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AD1-Ju-oRc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekq-Hx-1b7">
+                                <rect key="frame" x="175" y="566" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ekq-Hx-1b7" secondAttribute="height" multiplier="22:3" priority="750" id="bd7-sf-jDP"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto" destination="wfb-xF-xea" eventType="touchUpInside" id="b9s-Qq-2Na"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vWN-i4-6iI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ekq-Hx-1b7" firstAttribute="height" secondItem="AD1-Ju-oRc" secondAttribute="height" multiplier="0.0569196" id="CyS-2A-vqJ"/>
+                            <constraint firstItem="Ekq-Hx-1b7" firstAttribute="centerX" secondItem="vWN-i4-6iI" secondAttribute="centerX" id="aPd-YU-Wr4"/>
+                            <constraint firstItem="Ekq-Hx-1b7" firstAttribute="bottom" secondItem="vWN-i4-6iI" secondAttribute="bottom" id="kid-HZ-fO4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CcX-Kq-5QW"/>
+                    <connections>
+                        <outlet property="photoBtn" destination="Ekq-Hx-1b7" id="QuD-eI-oNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkv-tM-Ybw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="-113"/>
         </scene>
     </scenes>
     <resources>

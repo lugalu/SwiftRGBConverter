@@ -92,7 +92,7 @@ extension TextFieldHandler{
     }
     
     func assignR1(index i: Int, value: Double){
-        rgb1[i].text = String(value)
+        rgb1[i].text = String(format: "%.4f", value)
 
     }
  
