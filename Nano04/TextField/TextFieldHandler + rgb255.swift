@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension TextFieldHandler{
+extension TextfieldHandler{
     
     @IBAction func rgb255DidEnd(_ sender: UITextField) {
         

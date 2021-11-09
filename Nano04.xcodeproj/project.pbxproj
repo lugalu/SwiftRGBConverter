@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0978924726F81E2B007540F6 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978924626F81E2B007540F6 /* ImageView.swift */; };
+		0991BA2F2733698C004B24A8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991BA2E2733698C004B24A8 /* KeyboardView.swift */; };
+		0991BA3027337166004B24A8 /* HexKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0991BA2C27335F4E004B24A8 /* HexKeyboard.xib */; };
+		0991BA3227343D7A004B24A8 /* TextfieldHandler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0991BA3127343D7A004B24A8 /* TextfieldHandler.xib */; };
 		0995E71726F2CDE6004700A3 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995E71626F2CDE6004700A3 /* ColorConverter.swift */; };
 		0995E71926F2D8EA004700A3 /* CameraController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0995E71826F2D8EA004700A3 /* CameraController.storyboard */; };
 		09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8945F26C44EF300055E9E /* AppDelegate.swift */; };
@@ -16,7 +19,7 @@
 		09F8946926C44EF400055E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F8946826C44EF400055E9E /* Assets.xcassets */; };
 		09F8946C26C44EF400055E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F8946A26C44EF400055E9E /* LaunchScreen.storyboard */; };
 		09FBE50126C6EC0D00C60CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE50026C6EC0D00C60CD4 /* ViewController.swift */; };
-		09FBE50326C7056000C60CD4 /* TextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE50226C7056000C60CD4 /* TextFieldHandler.swift */; };
+		09FBE50326C7056000C60CD4 /* TextfieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE50226C7056000C60CD4 /* TextfieldHandler.swift */; };
 		09FBE50526CA9D1600C60CD4 /* TextFieldhandler + hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE50426CA9D1600C60CD4 /* TextFieldhandler + hex.swift */; };
 		09FBE50726CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE50626CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift */; };
 		09FBE50926CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE50826CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift */; };
@@ -27,8 +30,24 @@
 		09FBE51626CEF7C500C60CD4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FBE51526CEF7C500C60CD4 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0991BA2B27335F15004B24A8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0978924626F81E2B007540F6 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		0991BA2C27335F4E004B24A8 /* HexKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HexKeyboard.xib; sourceTree = "<group>"; };
+		0991BA2E2733698C004B24A8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		0991BA3127343D7A004B24A8 /* TextfieldHandler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextfieldHandler.xib; sourceTree = "<group>"; };
 		0995E71626F2CDE6004700A3 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		0995E71826F2D8EA004700A3 /* CameraController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraController.storyboard; sourceTree = "<group>"; };
 		09F8945C26C44EF300055E9E /* Nano04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano04.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +58,7 @@
 		09F8946B26C44EF400055E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F8946D26C44EF400055E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09FBE50026C6EC0D00C60CD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09FBE50226C7056000C60CD4 /* TextFieldHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHandler.swift; sourceTree = "<group>"; };
+		09FBE50226C7056000C60CD4 /* TextfieldHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldHandler.swift; sourceTree = "<group>"; };
 		09FBE50426CA9D1600C60CD4 /* TextFieldhandler + hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldhandler + hex.swift"; sourceTree = "<group>"; };
 		09FBE50626CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldHandler + rgb255.swift"; sourceTree = "<group>"; };
 		09FBE50826CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldhandler + CMYK .swift"; sourceTree = "<group>"; };
@@ -87,6 +106,8 @@
 				09F8946A26C44EF400055E9E /* LaunchScreen.storyboard */,
 				09F8946526C44EF300055E9E /* Main.storyboard */,
 				0995E71826F2D8EA004700A3 /* CameraController.storyboard */,
+				0991BA2C27335F4E004B24A8 /* HexKeyboard.xib */,
+				0991BA3127343D7A004B24A8 /* TextfieldHandler.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -104,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0978924626F81E2B007540F6 /* ImageView.swift */,
+				0991BA2E2733698C004B24A8 /* KeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,7 +164,7 @@
 		09FBE50C26CA9F3700C60CD4 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				09FBE50226C7056000C60CD4 /* TextFieldHandler.swift */,
+				09FBE50226C7056000C60CD4 /* TextfieldHandler.swift */,
 				09FBE50426CA9D1600C60CD4 /* TextFieldhandler + hex.swift */,
 				09FBE50626CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift */,
 				09FBE50826CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift */,
@@ -161,6 +183,7 @@
 				09F8945826C44EF300055E9E /* Sources */,
 				09F8945926C44EF300055E9E /* Frameworks */,
 				09F8945A26C44EF300055E9E /* Resources */,
+				0991BA2B27335F15004B24A8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -177,7 +200,7 @@
 		09F8945426C44EF300055E9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					09F8945B26C44EF300055E9E = {
@@ -210,8 +233,10 @@
 			files = (
 				09F8946C26C44EF400055E9E /* LaunchScreen.storyboard in Resources */,
 				09F8946926C44EF400055E9E /* Assets.xcassets in Resources */,
+				0991BA3227343D7A004B24A8 /* TextfieldHandler.xib in Resources */,
 				09F8946726C44EF300055E9E /* Main.storyboard in Resources */,
 				0995E71926F2D8EA004700A3 /* CameraController.storyboard in Resources */,
+				0991BA3027337166004B24A8 /* HexKeyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +249,7 @@
 			files = (
 				09FBE50526CA9D1600C60CD4 /* TextFieldhandler + hex.swift in Sources */,
 				0995E71726F2CDE6004700A3 /* ColorConverter.swift in Sources */,
-				09FBE50326C7056000C60CD4 /* TextFieldHandler.swift in Sources */,
+				09FBE50326C7056000C60CD4 /* TextfieldHandler.swift in Sources */,
 				09FBE50E26CED64E00C60CD4 /* ColorPickerViewController.swift in Sources */,
 				09FBE50126C6EC0D00C60CD4 /* ViewController.swift in Sources */,
 				09FBE50926CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift in Sources */,
@@ -234,6 +259,7 @@
 				09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */,
 				09FBE50B26CA9F1900C60CD4 /* TextFieldHandler + rgb1.swift in Sources */,
 				09FBE51226CEDC7D00C60CD4 /* ColorUpdater.swift in Sources */,
+				0991BA2F2733698C004B24A8 /* KeyboardView.swift in Sources */,
 				09FBE51026CED78E00C60CD4 /* ColorUpdaterDelegate.swift in Sources */,
 				09F8946226C44EF300055E9E /* SceneDelegate.swift in Sources */,
 			);
@@ -312,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -367,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

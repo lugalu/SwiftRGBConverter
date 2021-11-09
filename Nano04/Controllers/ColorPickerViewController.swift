@@ -16,19 +16,17 @@ class ColorPickerViewController: UIViewController {
     var mainView: ViewController? = nil
     var preview: UIImage? = nil
     var shouldSelectColor: Bool = false
+
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageView.ViewController = self
         self.tabBarController?.viewControllers?.forEach(){ vc in
             if let main = vc as? ViewController{
                 mainView = main
                 return
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imageView.ViewController = self
     }
     
     @IBAction func onCameraTap() {

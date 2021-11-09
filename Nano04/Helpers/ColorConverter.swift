@@ -148,8 +148,8 @@ extension ColorConverter{
     static func stringToCMYK(strings: (c: String?, m: String?, k: String?, y: String?)) -> (c: Double, m: Double, y: Double, k: Double){
         let values = (c: (ColorConverter.stringToDouble(strings.c ?? "0") / 100.0),
                       m: (ColorConverter.stringToDouble(strings.m ?? "0") / 100.0),
-                      y: (ColorConverter.stringToDouble(strings.k ?? "0") / 100.0),
-                      k: (ColorConverter.stringToDouble(strings.y ?? "0") / 100.0))
+                      y: (ColorConverter.stringToDouble(strings.y ?? "0") / 100.0),
+                      k: (ColorConverter.stringToDouble(strings.k ?? "0") / 100.0))
         return values
     }
 }

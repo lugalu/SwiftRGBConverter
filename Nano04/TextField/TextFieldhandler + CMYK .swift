@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension TextFieldHandler{
+extension TextfieldHandler{
     
     @IBAction func didEndCmyk(_ sender: UITextField) {
         

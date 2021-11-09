@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension TextFieldHandler{
+extension TextfieldHandler{
     
     @IBAction func didEndRgb1(_ sender: UITextField) {
         let rText = rgb1[0].text?.replacingOccurrences(of: ",", with: ".") ?? "0.0"

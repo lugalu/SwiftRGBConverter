@@ -9,24 +9,26 @@ import UIKit
 
 class ViewController: UIViewController, ColorUpdaterDelegate {
     
-    var textfieldHandler = TextFieldHandler()
+    var textfieldHandler: TextfieldHandler!
     @IBOutlet weak var colorViewer: ColorUpdater!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        textfieldHandler = TextfieldHandler.instantiate()
+        textfieldHandler.colorDelegate = self
         
-        self.view.subviews.forEach(){ subv in
-            if let sub = subv as? TextFieldHandler{
-                textfieldHandler = sub
-                textfieldHandler.colorDelegate = self
-                colorViewer.layer.cornerRadius = 20
-                return
-            }
-        }
-       
-        
+        //textfieldHandler.backgroundColor = .red
+       self.view.addSubview(textfieldHandler)
+        //self.addChild(textfieldHandler)
+        self.setupTextfieldConstraints()
+        textfieldHandler.setupHexKeyboard()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
     
     func updateColorViewer(){
         colorViewer.updateColor(color:(r: textfieldHandler.rgb255[0].text,
@@ -42,8 +44,20 @@ class ViewController: UIViewController, ColorUpdaterDelegate {
     func updateColorViewer(color: UIColor) {
         colorViewer.updateColor(color: color)
     }
-    
+ 
+    func setupTextfieldConstraints(){
+        textfieldHandler.translatesAutoresizingMaskIntoConstraints = false
+        textfieldHandler.topAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100).isActive = true
+        textfieldHandler.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor).isActive = true
+        textfieldHandler.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        textfieldHandler.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        
+    }
+        
 }
+
+
+
 
 
 

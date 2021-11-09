@@ -6,7 +6,7 @@
 //
 import UIKit
 
-extension TextFieldHandler{
+extension TextfieldHandler{
     //This file has all the hex conversions or needs for the hexField to work properly
     
     /*

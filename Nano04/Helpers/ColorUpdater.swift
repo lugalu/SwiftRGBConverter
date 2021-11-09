@@ -11,7 +11,16 @@ import UIKit
 
 class ColorUpdater: UIView{
     
-    
+    /**
+     Updates de color with and RGBA 1.0 tuple that uses CGFloats as type
+     
+     - Parameters:
+        - color: Tuple following the order of:
+        - R: Red channel
+        - G: Green Chanel
+        - B: Blue Channel
+        - A: Alpha Channel
+     */
     func updateColor(color: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)){
         self.backgroundColor = UIColor(red: color.r, green: color.g, blue: color.b, alpha: color.a)
     }
