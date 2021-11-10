@@ -9,9 +9,10 @@ import UIKit
 
 class KeyboardView: UIView {
 
-    weak var target: UIKeyInput?
+    weak var target: UITextField?
+    weak var colorDelegate: ColorUpdaterDelegate?
     
-    static func instantiate(target: UIKeyInput)-> KeyboardView? {
+    static func instantiate(target: UITextField, delegate: ColorUpdaterDelegate?)-> KeyboardView? {
         //autoresizingMask = [.flexibleWidth, .flexibleHeight]
         guard let xibArr = Bundle.main.loadNibNamed("HexKeyboard", owner: self, options: nil) else{
             return nil
@@ -20,11 +21,13 @@ class KeyboardView: UIView {
             return nil
         }
         xib.target = target
+        xib.colorDelegate = delegate
         return xib
     }
     
     @IBAction func didPressEnter(_ sender: UIButton){
-        print("älp")
+        self.target?.resignFirstResponder()
+        colorDelegate?.updateColorViewer()
     }
     
     @IBAction func didPressDelete(_ sender: UIButton){
@@ -35,8 +38,17 @@ class KeyboardView: UIView {
         guard let text = sender.titleLabel?.text else {
             return
         }
-        print(self.target)
-        self.target?.insertText(text)
+        if shouldInsert(){
+            self.target?.insertText(text)
+        }
+       
     }
-  
+    
+    func shouldInsert() -> Bool{
+        let maxChars:Int = 2
+        
+        let text = target?.text ?? ""
+        
+        return text.count < maxChars
+    }
 }

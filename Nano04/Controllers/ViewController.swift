@@ -25,9 +25,6 @@ class ViewController: UIViewController, ColorUpdaterDelegate {
         textfieldHandler.setupHexKeyboard()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
 
     
     func updateColorViewer(){

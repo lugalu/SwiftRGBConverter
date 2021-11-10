@@ -34,7 +34,7 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
      */
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxChars:Int
-        var allowedChars:String? = nil
+//        var allowedChars:String? = nil
         let maxValue: Double
       
         let text = textField.text ?? ""
@@ -44,13 +44,13 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
         var newText = text.replacingCharacters(in: stringRange, with: string)
         newText = newText.replacingOccurrences(of: ",", with: ".")
         switch textField {
-            case textField where hex.contains(textField):
-               
-                maxChars = 2
-                allowedChars = "ABCDEF0123456789"
-                maxValue = 0
-                print("I'm checking?")
-                return newText.count <= maxChars && newText == newText.filter(allowedChars?.contains ?? "".contains)
+//            case textField where hex.contains(textField):
+//
+//                maxChars = 2
+//                allowedChars = "ABCDEF0123456789"
+//                maxValue = 0
+//                print("I'm checking?")
+//                return newText.count <= maxChars && newText == newText.filter(allowedChars?.contains ?? "".contains)
                 
             case textField where rgb1.contains(textField):
                
@@ -91,10 +91,12 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
         
     func setupHexKeyboard(){
         for h in hex{
-            guard let inputView = KeyboardView.instantiate(target: h) else{ fatalError("couldn't instantiate") }
+            guard let inputView = KeyboardView.instantiate(target: h, delegate: colorDelegate) else{ fatalError("couldn't instantiate") }
             
             h.inputView = inputView
+            print(h.keyboardLayoutGuide.layoutFrame.height)
             
+            h.delegate = self
         }
     }
  
