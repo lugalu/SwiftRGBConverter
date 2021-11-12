@@ -24,7 +24,7 @@ extension TextfieldHandler{
             assignR255(index: 0, value: r255)
             assignR1(index: 0, value: r1)
             assignCMYK(convertedCMYK)
-            print("0")
+            
         case hex[1]:                                                                        //GREEN channel
             let g255 = ColorConverter.hexToNumber(value: hex[1].text)
             let g1 = ColorConverter.rgb255to1(g255)
@@ -35,7 +35,7 @@ extension TextfieldHandler{
             assignR255(index: 1, value: g255)
             assignR1(index: 1, value: g1)
             assignCMYK(convertedCMYK)
-            print("1")
+           
         case hex[2]:                                                                        //BLUE channel
             let b255 = ColorConverter.hexToNumber(value: hex[2].text)
             let b1 = ColorConverter.rgb255to1(b255)
@@ -46,14 +46,14 @@ extension TextfieldHandler{
             assignR255(index: 2, value: b255)
             assignR1(index: 2, value: b1)
             assignCMYK(convertedCMYK)
-            print("2")
+          
         case hex[3]:                                                                        //ALPHA channel
             let a255 = ColorConverter.hexToNumber(value: hex[3].text)
             let a1 = ColorConverter.rgb255to1(a255)
             
             assignR255(index: 3, value: a255) 
             assignR1(index: 3, value: a1)
-            print("3")
+        
         default:
            return
         }

@@ -30,7 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="7ba-8V-OIh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="hn3-Cd-Oww"/>
+                    <tabBarItem key="tabBarItem" title="Converter" image="repeat" catalog="system" id="hn3-Cd-Oww"/>
                     <connections>
                         <outlet property="colorViewer" destination="gXp-XZ-si7" id="i2L-IT-F6z"/>
                     </connections>
@@ -70,7 +70,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -31,22 +31,49 @@ class ImageView: UIImageView {
         
             // 3. get the firstTab's rect inside the window
             let firstTabRectInWindow = firstTab.convert(firstTab.frame, to: ViewController.view.window)
-            //print("firstTabRectInWindow: \(firstTabRectInWindow)")
             
             let points = calculateAngles(viewControlerPos: viewControlerPos, firstTabRectInWindow: firstTabRectInWindow, animatedView: animatedView)
-            for point in points{
-                UIView.animate(withDuration: 1.0, animations: {
-    //              animatedView.frame = CGRect(x: (firstTabRectInWindow.origin.x + firstTabRectInWindow.width / 2) - 17 , y: firstTabRectInWindow.origin.y , width: 30, height: 30)
-                    
-                    animatedView.frame = CGRect(x: point.x, y: point.y, width: 30, height: 30)
-                   
-                }){_ in
-                   animatedView.removeFromSuperview()
-                }
-            }
+            //animatedView.frame = CGRect(x: points[1].x, y: points[1].y, width: 30, height: 30)
+            animation(currentIndex: 0, maxIndex: points.count, view: animatedView, points: points)
+            
+//            UIView.animate(withDuration: 0.5, delay: .zero, options: .curveLinear ,animations: {
+//
+//
+//                animatedView.frame = CGRect(x: points[1].x, y: points[1].y, width: 30, height: 30)
+//
+//
+//            }){ _ in
+//
+//                UIView.animate(withDuration: 0.5, animations: {
+//                    animatedView.frame = CGRect(x: points[2].x, y: points[2].y, width: 30, height: 30)
+//                }){ _ in
+//                    animatedView.removeFromSuperview()
+//                }
+//
+//            }
         }
     }
        
+    
+    func animation(currentIndex i: Int, maxIndex: Int, view: UIView, points: [CGPoint]){
+        let time = 1.0/Double(points.count)
+        UIView.animateKeyframes(withDuration: 1, delay: .zero, options: [], animations: {
+            for i in 0...points.count-1 {
+                UIView.addKeyframe(withRelativeStartTime: Double(i) * time , relativeDuration: 1.0 / Double(points.count-1), animations: {
+                    view.layer.position = CGPoint(x: points[i].x, y: points[i].y)
+                })
+            }
+        }){ _ in
+            view.removeFromSuperview()
+        }
+        
+//        UIView.animate(withDuration: 0.03, delay: .zero, options: .beginFromCurrentState, animations: {
+//            view.frame = CGRect(x: points[i].x, y: points[i].y, width: 30, height: 30)
+//        }){ _ in
+//            self.animation(currentIndex: i + 1, maxIndex: maxIndex, view: view, points: points)
+//        }
+//
+    }
     
     func getPixelColor(atPosition:CGPoint) -> UIColor{
 
@@ -67,23 +94,26 @@ class ImageView: UIImageView {
     }
     
     func calculateAngles(viewControlerPos:CGPoint, firstTabRectInWindow:CGRect,animatedView:UIView) -> [CGPoint]{
-        let tabX =  firstTabRectInWindow.origin.x + firstTabRectInWindow.width/2 - 17
-    
-        let a:CGFloat = viewControlerPos.x - tabX
-        let b =  viewControlerPos.y - firstTabRectInWindow.origin.y
+        let tabX =  firstTabRectInWindow.origin.x + firstTabRectInWindow.width/2
         let pi = Double.pi
         
+        var points: [CGPoint] = []
+
         let angleStep = pi/2 / Double(5 + 1)
         var angle = angleStep
-        var points: [CGPoint] = []
-        
+
+        let a:CGFloat = viewControlerPos.x - tabX
+        let b =  viewControlerPos.y - firstTabRectInWindow.origin.y - 17
+
+
         while angle < pi/2 {
-            let x = tabX + a * CGFloat(cos(angle))
-            let y = viewControlerPos.y - b * CGFloat(sin(angle))
-            points.append(CGPoint(x:x, y: y))
+            let x1 = tabX + a * CGFloat(cos(angle))
+            let y2 = viewControlerPos.y - b * CGFloat(sin(angle))
+            points.append(CGPoint(x:x1, y: y2))
             angle += angleStep
         }
         
+
         return points
     }
 }

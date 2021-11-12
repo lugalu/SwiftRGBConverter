@@ -18,15 +18,16 @@ class ViewController: UIViewController, ColorUpdaterDelegate {
         textfieldHandler = TextfieldHandler.instantiate()
         textfieldHandler.colorDelegate = self
         
-        //textfieldHandler.backgroundColor = .red
+
        self.view.addSubview(textfieldHandler)
-        //self.addChild(textfieldHandler)
         self.setupTextfieldConstraints()
         textfieldHandler.setupHexKeyboard()
     }
     
 
-    
+    /**
+        This method is to conform with the ColorUpdaterDelegate
+     */
     func updateColorViewer(){
         colorViewer.updateColor(color:(r: textfieldHandler.rgb255[0].text,
                                        g: textfieldHandler.rgb255[1].text,

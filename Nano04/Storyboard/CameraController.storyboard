@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="95C-L4-aSm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,53 +31,26 @@
             <objects>
                 <viewController storyboardIdentifier="imagePreview" id="Vc7-bD-WkC" customClass="ColorPickerViewController" customModule="Nano04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDm-hX-qyg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-De-1pA">
-                                <rect key="frame" x="490" y="541" width="86" height="30"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-DG-7fl">
+                                <rect key="frame" x="24" y="128" width="73" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="127:48" id="Umv-dd-sCn"/>
-                                    <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="43:15" priority="750" id="eNH-xX-REv"/>
+                                    <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="33:14" id="z6V-Cg-SLa"/>
                                 </constraints>
-                                <state key="normal" title="Open Galery"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Umv-dd-sCn"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Umv-dd-sCn"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="onGaleryTap" destination="Vc7-bD-WkC" eventType="touchUpInside" id="oVw-qx-rGj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr8-DG-7fl">
-                                <rect key="frame" x="20" y="541" width="95" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="127:48" id="1TC-4u-VKO"/>
-                                    <constraint firstAttribute="width" secondItem="lr8-DG-7fl" secondAttribute="height" multiplier="19:6" priority="750" id="T5I-sC-KdG"/>
-                                </constraints>
-                                <state key="normal" title="Open Camera"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1TC-4u-VKO"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="1TC-4u-VKO"/>
-                                    </mask>
-                                </variation>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="small">
+                                    <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onCameraTap" destination="Vc7-bD-WkC" eventType="touchUpInside" id="EGT-gc-UQE"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-Py-nt1" customClass="ImageView" customModule="Nano04" customModuleProvider="target">
-                                <rect key="frame" x="41" y="148" width="545" height="336"/>
+                                <rect key="frame" x="24" y="192" width="376" height="501.5"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -95,99 +70,63 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-De-1pA">
+                                <rect key="frame" x="327" y="128" width="73" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x2c-De-1pA" secondAttribute="height" multiplier="33:14" id="14e-YY-IGc"/>
+                                </constraints>
+                                <state key="normal" title="Open Galery"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="dynamic">
+                                    <imageReference key="image" image="folder" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onGaleryTap" destination="Vc7-bD-WkC" eventType="touchUpInside" id="oVw-qx-rGj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OZI-xr-dlV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="OZI-xr-dlV" secondAttribute="leading" constant="20" id="4SU-i0-4Id"/>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="7.5" id="4Uw-fW-y9h"/>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="17" id="4ix-8D-KMX"/>
-                            <constraint firstItem="x2c-De-1pA" firstAttribute="trailing" secondItem="lr8-DG-7fl" secondAttribute="trailing" id="9dv-jb-qZc"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="16" id="Dat-Mc-XnL"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="height" secondItem="wDm-hX-qyg" secondAttribute="height" multiplier="0.630435" id="F6q-bI-PXB"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="height" secondItem="wDm-hX-qyg" secondAttribute="height" multiplier="0.724638" id="FbL-HQ-0Am"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="lr8-DG-7fl" secondAttribute="bottom" constant="160" id="GYa-ZC-bVl"/>
                             <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="kCK-Py-nt1" secondAttribute="bottom" constant="27" id="Ivw-eN-EN8"/>
-                            <constraint firstItem="x2c-De-1pA" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="17" id="KrX-SW-qmu"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="57" id="LFh-gX-Vh9"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="lr8-DG-7fl" secondAttribute="bottom" constant="159" id="M5x-Hj-Vi5"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="24" id="Nhd-Fr-IW0"/>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="8" symbolic="YES" id="PCK-Va-Rlh"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" constant="40" id="KUi-X3-XjD"/>
+                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="OZI-xr-dlV" secondAttribute="leading" constant="24" id="KYT-F7-Oo1"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" constant="104" id="UXc-ur-usI"/>
                             <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="14" id="Vjc-Ji-IQX"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="height" secondItem="wDm-hX-qyg" secondAttribute="height" multiplier="0.55971" id="XUK-dR-ufQ"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="centerY" secondItem="OZI-xr-dlV" secondAttribute="centerY" id="aEN-Id-sAS"/>
                             <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="151" id="agE-yy-Mtc"/>
                             <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="kCK-Py-nt1" secondAttribute="bottom" id="b1k-sK-Den"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="lr8-DG-7fl" secondAttribute="trailing" constant="16" id="dar-5b-y42"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="29" id="dzD-zS-948"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" id="exL-Y5-Ib3"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="lr8-DG-7fl" secondAttribute="trailing" constant="48" id="eyq-6L-vew"/>
-                            <constraint firstItem="x2c-De-1pA" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="8" symbolic="YES" id="oEb-r7-rAc"/>
-                            <constraint firstItem="x2c-De-1pA" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" constant="60" id="oGR-de-Nwf"/>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="8" symbolic="YES" id="oK0-8N-xkf"/>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="leading" secondItem="kCK-Py-nt1" secondAttribute="trailing" constant="8" symbolic="YES" id="sT5-uc-Yzx"/>
-                            <constraint firstItem="OZI-xr-dlV" firstAttribute="bottom" secondItem="lr8-DG-7fl" secondAttribute="bottom" constant="29" id="xl6-kZ-q94"/>
+                            <constraint firstItem="x2c-De-1pA" firstAttribute="top" secondItem="OZI-xr-dlV" secondAttribute="top" constant="40" id="oHe-hg-eaa"/>
+                            <constraint firstItem="OZI-xr-dlV" firstAttribute="trailing" secondItem="x2c-De-1pA" secondAttribute="trailing" constant="14" id="rU0-99-3Ft"/>
                             <constraint firstItem="kCK-Py-nt1" firstAttribute="width" secondItem="wDm-hX-qyg" secondAttribute="width" multiplier="0.908213" id="y1w-pO-YTs"/>
-                            <constraint firstItem="lr8-DG-7fl" firstAttribute="top" secondItem="x2c-De-1pA" secondAttribute="bottom" constant="8" symbolic="YES" id="yLY-Do-esz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Dat-Mc-XnL"/>
-                                <exclude reference="GYa-ZC-bVl"/>
                                 <exclude reference="Ivw-eN-EN8"/>
-                                <exclude reference="LFh-gX-Vh9"/>
-                                <exclude reference="M5x-Hj-Vi5"/>
                                 <exclude reference="agE-yy-Mtc"/>
                                 <exclude reference="b1k-sK-Den"/>
-                                <exclude reference="dar-5b-y42"/>
-                                <exclude reference="eyq-6L-vew"/>
                                 <exclude reference="F6q-bI-PXB"/>
                                 <exclude reference="FbL-HQ-0Am"/>
                                 <exclude reference="aEN-Id-sAS"/>
                                 <exclude reference="exL-Y5-Ib3"/>
-                                <exclude reference="4Uw-fW-y9h"/>
-                                <exclude reference="4ix-8D-KMX"/>
-                                <exclude reference="PCK-Va-Rlh"/>
-                                <exclude reference="oK0-8N-xkf"/>
-                                <exclude reference="sT5-uc-Yzx"/>
-                                <exclude reference="yLY-Do-esz"/>
-                                <exclude reference="9dv-jb-qZc"/>
-                                <exclude reference="KrX-SW-qmu"/>
-                                <exclude reference="oEb-r7-rAc"/>
-                                <exclude reference="oGR-de-Nwf"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="Dat-Mc-XnL"/>
-                                <include reference="GYa-ZC-bVl"/>
                                 <include reference="Ivw-eN-EN8"/>
-                                <exclude reference="LFh-gX-Vh9"/>
-                                <exclude reference="M5x-Hj-Vi5"/>
-                                <exclude reference="Nhd-Fr-IW0"/>
                                 <include reference="agE-yy-Mtc"/>
                                 <exclude reference="b1k-sK-Den"/>
-                                <exclude reference="dar-5b-y42"/>
-                                <exclude reference="dzD-zS-948"/>
-                                <exclude reference="eyq-6L-vew"/>
-                                <exclude reference="xl6-kZ-q94"/>
                                 <include reference="F6q-bI-PXB"/>
                                 <exclude reference="FbL-HQ-0Am"/>
                                 <exclude reference="aEN-Id-sAS"/>
                                 <exclude reference="exL-Y5-Ib3"/>
-                                <exclude reference="4SU-i0-4Id"/>
-                                <exclude reference="4Uw-fW-y9h"/>
-                                <include reference="4ix-8D-KMX"/>
-                                <exclude reference="PCK-Va-Rlh"/>
-                                <include reference="oK0-8N-xkf"/>
-                                <exclude reference="sT5-uc-Yzx"/>
-                                <exclude reference="yLY-Do-esz"/>
-                                <include reference="9dv-jb-qZc"/>
-                                <include reference="KrX-SW-qmu"/>
-                                <exclude reference="oEb-r7-rAc"/>
-                                <include reference="oGR-de-Nwf"/>
                             </mask>
                         </variation>
                     </view>
@@ -213,45 +152,58 @@
             <objects>
                 <viewController storyboardIdentifier="CameraVC" id="wfb-xF-xea" customClass="CameraViewController" customModule="Nano04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AD1-Ju-oRc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekq-Hx-1b7">
-                                <rect key="frame" x="175" y="566" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ekq-Hx-1b7" secondAttribute="height" multiplier="22:3" priority="750" id="bd7-sf-jDP"/>
-                                </constraints>
-                                <state key="normal" title="Take Photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHq-JS-vyt">
+                                <rect key="frame" x="162" y="772" width="90" height="90"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="60" scale="large" weight="thin"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="takePhoto" destination="wfb-xF-xea" eventType="touchUpInside" id="b9s-Qq-2Na"/>
+                                    <action selector="takePhoto" destination="wfb-xF-xea" eventType="touchUpInside" id="Mqs-xl-Krb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vWN-i4-6iI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ekq-Hx-1b7" firstAttribute="height" secondItem="AD1-Ju-oRc" secondAttribute="height" multiplier="0.0569196" id="CyS-2A-vqJ"/>
-                            <constraint firstItem="Ekq-Hx-1b7" firstAttribute="centerX" secondItem="vWN-i4-6iI" secondAttribute="centerX" id="aPd-YU-Wr4"/>
-                            <constraint firstItem="Ekq-Hx-1b7" firstAttribute="bottom" secondItem="vWN-i4-6iI" secondAttribute="bottom" id="kid-HZ-fO4"/>
+                            <constraint firstItem="vWN-i4-6iI" firstAttribute="trailing" secondItem="eHq-JS-vyt" secondAttribute="trailing" constant="162" id="4hB-ew-tjA"/>
+                            <constraint firstItem="eHq-JS-vyt" firstAttribute="bottom" secondItem="vWN-i4-6iI" secondAttribute="bottom" id="X4R-uJ-gaN"/>
+                            <constraint firstItem="eHq-JS-vyt" firstAttribute="width" secondItem="AD1-Ju-oRc" secondAttribute="width" multiplier="0.217391" id="hQH-68-oS4"/>
+                            <constraint firstItem="eHq-JS-vyt" firstAttribute="height" secondItem="AD1-Ju-oRc" secondAttribute="height" multiplier="0.100446" id="p97-2O-y4K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CcX-Kq-5QW"/>
                     <connections>
-                        <outlet property="photoBtn" destination="Ekq-Hx-1b7" id="QuD-eI-oNN"/>
+                        <outlet property="photoBtn" destination="eHq-JS-vyt" id="mBX-Di-deu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkv-tM-Ybw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="-113"/>
+            <point key="canvasLocation" x="-446.37681159420293" y="-113.16964285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <image name="eyedropper" catalog="system" width="128" height="119"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

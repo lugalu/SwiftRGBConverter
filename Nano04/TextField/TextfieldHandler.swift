@@ -16,25 +16,24 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
     @IBOutlet var cmky: [UITextField]!
     var colorDelegate: ColorUpdaterDelegate? = nil
     
-    
-    
+
+    /**
+        This method instantiates the textFieldhandler and configures the hexKeyboard
+        - Returns: Instance of TextField handler with the correct keyboard layout.
+     */
     static func instantiate() -> TextfieldHandler{
         let view: TextfieldHandler = initFromNib()
         view.setupHexKeyboard()
         return view
     }
           
-    
-       
-    
-    
     /**
      This method handles the overhaul configuration of each textfield
      it Includes the maximum amount of characters, Available characters, value range,and others
      */
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxChars:Int
-//        var allowedChars:String? = nil
+        var allowedChars:String? = nil
         let maxValue: Double
       
         let text = textField.text ?? ""
@@ -44,20 +43,19 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
         var newText = text.replacingCharacters(in: stringRange, with: string)
         newText = newText.replacingOccurrences(of: ",", with: ".")
         switch textField {
-//            case textField where hex.contains(textField):
-//
-//                maxChars = 2
-//                allowedChars = "ABCDEF0123456789"
-//                maxValue = 0
-//                print("I'm checking?")
-//                return newText.count <= maxChars && newText == newText.filter(allowedChars?.contains ?? "".contains)
+            case textField where hex.contains(textField):
+
+                maxChars = 2
+                allowedChars = "ABCDEF0123456789"
+                maxValue = 0
+                
+                return newText.count <= maxChars && newText == newText.filter(allowedChars?.contains ?? "".contains)
                 
             case textField where rgb1.contains(textField):
                
                 maxChars = 3
                 maxValue = 1.0
                 guard let value = Double(newText) else { return false }
-                
                 if Double(value) > maxValue { return false}
                 
             case textField where rgb255.contains(textField):
@@ -88,27 +86,18 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
   
 
     
-        
+    /**
+        This instantiates a keyboard for each hex field.
+     */
     func setupHexKeyboard(){
         for h in hex{
-            guard let inputView = KeyboardView.instantiate(target: h, delegate: colorDelegate) else{ fatalError("couldn't instantiate") }
-            
+            guard let inputView = KeyboardView.instantiate(target: h) else{ fatalError("couldn't instantiate") }
             h.inputView = inputView
-            print(h.keyboardLayoutGuide.layoutFrame.height)
-            
-            h.delegate = self
         }
     }
- 
-    func setupKeyboardContraints(_ inputView: KeyboardView, textfield: UITextField) {
 
-    }
     
     
 }
 
-extension UIView{
-    class func initFromNib<T: UIView>() -> T{
-        return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)?.first as! T
-    }
-}
+

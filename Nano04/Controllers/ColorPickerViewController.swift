@@ -13,20 +13,21 @@ class ColorPickerViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var galeryButton: UIButton!
     @IBOutlet weak var imageView: ImageView!
-    var mainView: ViewController? = nil
+    var colorDelegate: ColorUpdaterDelegate? = nil
     var preview: UIImage? = nil
     var shouldSelectColor: Bool = false
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.ViewController = self
-        self.tabBarController?.viewControllers?.forEach(){ vc in
-            if let main = vc as? ViewController{
-                mainView = main
-                return
-            }
+        
+        guard let vc = self.tabBarController?.viewControllers?.first as? ColorUpdaterDelegate else {
+            fatalError("ooops")
         }
+        
+        colorDelegate = vc
+        imageView.ViewController = self
+        imageView.colorUpdater = colorDelegate
     }
     
     @IBAction func onCameraTap() {

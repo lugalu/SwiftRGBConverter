@@ -10,10 +10,17 @@ import UIKit
 class KeyboardView: UIView {
 
     weak var target: UITextField?
-    weak var colorDelegate: ColorUpdaterDelegate?
     
-    static func instantiate(target: UITextField, delegate: ColorUpdaterDelegate?)-> KeyboardView? {
-        //autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    
+    /**
+        Instantiate a keyboard and configure some stuff.
+     
+        - Parameters:
+         - target: the target textfield that will recive the keyboard commands
+     
+        - Returns: a optional keyboard it's nil if casting or xib load failed.
+     */
+    static func instantiate(target: UITextField)-> KeyboardView? {
         guard let xibArr = Bundle.main.loadNibNamed("HexKeyboard", owner: self, options: nil) else{
             return nil
         }
@@ -21,13 +28,11 @@ class KeyboardView: UIView {
             return nil
         }
         xib.target = target
-        xib.colorDelegate = delegate
         return xib
     }
     
     @IBAction func didPressEnter(_ sender: UIButton){
         self.target?.resignFirstResponder()
-        colorDelegate?.updateColorViewer()
     }
     
     @IBAction func didPressDelete(_ sender: UIButton){
@@ -41,12 +46,15 @@ class KeyboardView: UIView {
         if shouldInsert(){
             self.target?.insertText(text)
         }
-       
     }
     
+    /**
+        Checks if the conditions are met to insert into the hex textfield.
+     
+        - Returns: Boolean value that represents if should or not insert.
+     */
     func shouldInsert() -> Bool{
         let maxChars:Int = 2
-        
         let text = target?.text ?? ""
         
         return text.count < maxChars

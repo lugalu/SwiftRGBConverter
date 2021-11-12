@@ -13,6 +13,7 @@
 		0991BA3227343D7A004B24A8 /* TextfieldHandler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0991BA3127343D7A004B24A8 /* TextfieldHandler.xib */; };
 		0995E71726F2CDE6004700A3 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995E71626F2CDE6004700A3 /* ColorConverter.swift */; };
 		0995E71926F2D8EA004700A3 /* CameraController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0995E71826F2D8EA004700A3 /* CameraController.storyboard */; };
+		09991282273C2EF700A4EB95 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09991281273C2EF700A4EB95 /* UIViewExtensions.swift */; };
 		09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8945F26C44EF300055E9E /* AppDelegate.swift */; };
 		09F8946226C44EF300055E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8946126C44EF300055E9E /* SceneDelegate.swift */; };
 		09F8946726C44EF300055E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F8946526C44EF300055E9E /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		0991BA3127343D7A004B24A8 /* TextfieldHandler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextfieldHandler.xib; sourceTree = "<group>"; };
 		0995E71626F2CDE6004700A3 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		0995E71826F2D8EA004700A3 /* CameraController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraController.storyboard; sourceTree = "<group>"; };
+		09991281273C2EF700A4EB95 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		09F8945C26C44EF300055E9E /* Nano04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F8945F26C44EF300055E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F8946126C44EF300055E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		09991280273C2EDF00A4EB95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09991281273C2EF700A4EB95 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		09F8945326C44EF300055E9E = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		09F8945E26C44EF300055E9E /* Nano04 */ = {
 			isa = PBXGroup;
 			children = (
+				09991280273C2EDF00A4EB95 /* Extensions */,
 				0988A6A72703F47600D6860A /* Helpers */,
 				090D5EC526F227CB00EA5BD4 /* Delegate */,
 				090D5EC426F227B600EA5BD4 /* Controllers */,
@@ -257,6 +268,7 @@
 				09FBE51626CEF7C500C60CD4 /* CameraViewController.swift in Sources */,
 				09FBE50726CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift in Sources */,
 				09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */,
+				09991282273C2EF700A4EB95 /* UIViewExtensions.swift in Sources */,
 				09FBE50B26CA9F1900C60CD4 /* TextFieldHandler + rgb1.swift in Sources */,
 				09FBE51226CEDC7D00C60CD4 /* ColorUpdater.swift in Sources */,
 				0991BA2F2733698C004B24A8 /* KeyboardView.swift in Sources */,
