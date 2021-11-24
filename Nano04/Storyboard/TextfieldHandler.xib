@@ -63,15 +63,6 @@
                         <action selector="editEndHex:" destination="-1" eventType="editingDidEnd" id="gVo-pG-wVQ"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FF" borderStyle="roundedRect" placeholder="FF" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Z5r-Vl-gaW">
-                    <rect key="frame" x="301" y="44" width="42" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                    <connections>
-                        <action selector="editEndHex:" destination="-1" eventType="editingDidEnd" id="2ts-gA-nru"/>
-                    </connections>
-                </textField>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FF" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="oSN-IL-BVO">
                     <rect key="frame" x="97" y="44" width="42" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -265,6 +256,15 @@
                     <connections>
                         <action selector="didEndRgb1:" destination="-1" eventType="editingDidEnd" id="93r-Eu-0FY"/>
                         <outlet property="delegate" destination="iN0-l3-epB" id="o8O-3S-fqr"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FF" borderStyle="roundedRect" placeholder="FF" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Z5r-Vl-gaW">
+                    <rect key="frame" x="302" y="44" width="42" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                    <connections>
+                        <action selector="editEndHex:" destination="-1" eventType="editingDidEnd" id="2ts-gA-nru"/>
                     </connections>
                 </textField>
             </subviews>

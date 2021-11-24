@@ -14,6 +14,12 @@
 		0995E71726F2CDE6004700A3 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995E71626F2CDE6004700A3 /* ColorConverter.swift */; };
 		0995E71926F2D8EA004700A3 /* CameraController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0995E71826F2D8EA004700A3 /* CameraController.storyboard */; };
 		09991282273C2EF700A4EB95 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09991281273C2EF700A4EB95 /* UIViewExtensions.swift */; };
+		099C882827405089004CAB85 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C882727405089004CAB85 /* ColorView.swift */; };
+		09E6A29A274E9EB400161A9D /* ColorConverter + RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A299274E9EB400161A9D /* ColorConverter + RGB.swift */; };
+		09E6A29C274E9EE500161A9D /* ColorConverter + Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A29B274E9EE500161A9D /* ColorConverter + Hex.swift */; };
+		09E6A29E274E9F2B00161A9D /* ColorConverter + CMYK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A29D274E9F2B00161A9D /* ColorConverter + CMYK.swift */; };
+		09E6A2A0274E9F7100161A9D /* ColorConverter + HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A29F274E9F7100161A9D /* ColorConverter + HSV.swift */; };
+		09E6A2A2274E9FCC00161A9D /* ColorConverter + Analogous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A2A1274E9FCC00161A9D /* ColorConverter + Analogous.swift */; };
 		09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8945F26C44EF300055E9E /* AppDelegate.swift */; };
 		09F8946226C44EF300055E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8946126C44EF300055E9E /* SceneDelegate.swift */; };
 		09F8946726C44EF300055E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F8946526C44EF300055E9E /* Main.storyboard */; };
@@ -52,6 +58,12 @@
 		0995E71626F2CDE6004700A3 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		0995E71826F2D8EA004700A3 /* CameraController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraController.storyboard; sourceTree = "<group>"; };
 		09991281273C2EF700A4EB95 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		099C882727405089004CAB85 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		09E6A299274E9EB400161A9D /* ColorConverter + RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorConverter + RGB.swift"; sourceTree = "<group>"; };
+		09E6A29B274E9EE500161A9D /* ColorConverter + Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorConverter + Hex.swift"; sourceTree = "<group>"; };
+		09E6A29D274E9F2B00161A9D /* ColorConverter + CMYK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorConverter + CMYK.swift"; sourceTree = "<group>"; };
+		09E6A29F274E9F7100161A9D /* ColorConverter + HSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorConverter + HSV.swift"; sourceTree = "<group>"; };
+		09E6A2A1274E9FCC00161A9D /* ColorConverter + Analogous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorConverter + Analogous.swift"; sourceTree = "<group>"; };
 		09F8945C26C44EF300055E9E /* Nano04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F8945F26C44EF300055E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F8946126C44EF300055E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +131,11 @@
 			children = (
 				09FBE51126CEDC7D00C60CD4 /* ColorUpdater.swift */,
 				0995E71626F2CDE6004700A3 /* ColorConverter.swift */,
+				09E6A2A1274E9FCC00161A9D /* ColorConverter + Analogous.swift */,
+				09E6A299274E9EB400161A9D /* ColorConverter + RGB.swift */,
+				09E6A29B274E9EE500161A9D /* ColorConverter + Hex.swift */,
+				09E6A29D274E9F2B00161A9D /* ColorConverter + CMYK.swift */,
+				09E6A29F274E9F7100161A9D /* ColorConverter + HSV.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -128,6 +145,7 @@
 			children = (
 				0978924626F81E2B007540F6 /* ImageView.swift */,
 				0991BA2E2733698C004B24A8 /* KeyboardView.swift */,
+				099C882727405089004CAB85 /* ColorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,13 +276,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E6A29E274E9F2B00161A9D /* ColorConverter + CMYK.swift in Sources */,
 				09FBE50526CA9D1600C60CD4 /* TextFieldhandler + hex.swift in Sources */,
 				0995E71726F2CDE6004700A3 /* ColorConverter.swift in Sources */,
+				09E6A2A0274E9F7100161A9D /* ColorConverter + HSV.swift in Sources */,
+				09E6A29A274E9EB400161A9D /* ColorConverter + RGB.swift in Sources */,
 				09FBE50326C7056000C60CD4 /* TextfieldHandler.swift in Sources */,
+				09E6A29C274E9EE500161A9D /* ColorConverter + Hex.swift in Sources */,
 				09FBE50E26CED64E00C60CD4 /* ColorPickerViewController.swift in Sources */,
 				09FBE50126C6EC0D00C60CD4 /* ViewController.swift in Sources */,
 				09FBE50926CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift in Sources */,
 				0978924726F81E2B007540F6 /* ImageView.swift in Sources */,
+				099C882827405089004CAB85 /* ColorView.swift in Sources */,
 				09FBE51626CEF7C500C60CD4 /* CameraViewController.swift in Sources */,
 				09FBE50726CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift in Sources */,
 				09F8946026C44EF300055E9E /* AppDelegate.swift in Sources */,
@@ -273,6 +296,7 @@
 				09FBE51226CEDC7D00C60CD4 /* ColorUpdater.swift in Sources */,
 				0991BA2F2733698C004B24A8 /* KeyboardView.swift in Sources */,
 				09FBE51026CED78E00C60CD4 /* ColorUpdaterDelegate.swift in Sources */,
+				09E6A2A2274E9FCC00161A9D /* ColorConverter + Analogous.swift in Sources */,
 				09F8946226C44EF300055E9E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

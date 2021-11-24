@@ -33,30 +33,19 @@ class ImageView: UIImageView {
             let firstTabRectInWindow = firstTab.convert(firstTab.frame, to: ViewController.view.window)
             
             let points = calculateAngles(viewControlerPos: viewControlerPos, firstTabRectInWindow: firstTabRectInWindow, animatedView: animatedView)
-            //animatedView.frame = CGRect(x: points[1].x, y: points[1].y, width: 30, height: 30)
-            animation(currentIndex: 0, maxIndex: points.count, view: animatedView, points: points)
-            
-//            UIView.animate(withDuration: 0.5, delay: .zero, options: .curveLinear ,animations: {
-//
-//
-//                animatedView.frame = CGRect(x: points[1].x, y: points[1].y, width: 30, height: 30)
-//
-//
-//            }){ _ in
-//
-//                UIView.animate(withDuration: 0.5, animations: {
-//                    animatedView.frame = CGRect(x: points[2].x, y: points[2].y, width: 30, height: 30)
-//                }){ _ in
-//                    animatedView.removeFromSuperview()
-//                }
-//
-//            }
+            animation(view: animatedView, points: points)
         }
     }
        
-    
-    func animation(currentIndex i: Int, maxIndex: Int, view: UIView, points: [CGPoint]){
+    /**
+     Animates the view that moves on click, passing through each pre-defined points
+     - Parameters:
+        - view: the view to recieve the animation
+        - points: each point to move the view.
+     */
+    func animation(view: UIView, points: [CGPoint]){
         let time = 1.0/Double(points.count)
+        
         UIView.animateKeyframes(withDuration: 1, delay: .zero, options: [], animations: {
             for i in 0...points.count-1 {
                 UIView.addKeyframe(withRelativeStartTime: Double(i) * time , relativeDuration: 1.0 / Double(points.count-1), animations: {
@@ -66,15 +55,13 @@ class ImageView: UIImageView {
         }){ _ in
             view.removeFromSuperview()
         }
-        
-//        UIView.animate(withDuration: 0.03, delay: .zero, options: .beginFromCurrentState, animations: {
-//            view.frame = CGRect(x: points[i].x, y: points[i].y, width: 30, height: 30)
-//        }){ _ in
-//            self.animation(currentIndex: i + 1, maxIndex: maxIndex, view: view, points: points)
-//        }
-//
     }
     
+    /**
+     gets the pixel color in a specific position from the view, instead of taking it from the picture
+     - Parameters:
+        - atPosition: the position of the pixel to be extracted.
+     */
     func getPixelColor(atPosition:CGPoint) -> UIColor{
 
         var pixel:[CUnsignedChar] = [0, 0, 0, 0];
@@ -99,7 +86,7 @@ class ImageView: UIImageView {
         
         var points: [CGPoint] = []
 
-        let angleStep = pi/2 / Double(5 + 1)
+        let angleStep = pi / 2 / Double(5 + 1)
         var angle = angleStep
 
         let a:CGFloat = viewControlerPos.x - tabX
