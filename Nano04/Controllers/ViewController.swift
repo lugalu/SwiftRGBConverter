@@ -129,33 +129,14 @@ class ViewController: UIViewController, ColorUpdaterDelegate {
         let Red: Double = Double(textfieldHandler.rgb1[0].text ?? "") ?? 0
         let Green: Double = Double(textfieldHandler.rgb1[1].text ?? "") ?? 0
         let Blue: Double = Double(textfieldHandler.rgb1[2].text ?? "") ?? 0
-        let Alpha: Double = Double(textfieldHandler.rgb1[3].text ?? "") ?? 0
         
-      //  print(Red, Green, Blue, Alpha)
-        let (h,s,l) = ColorConverter.rgbToHSV(r: Red, g: Green, b: Blue)
-        print(h,s,l)
+        let (alpha, rightOne, rightTwo, leftOne, leftTwo) = ColorConverter.calculateAnalogous(red: Red, green: Green, blue: Blue)
         
-        let closeDegree: Double = 20
-        let biggerDegree: Double = 35
-        
-        let hRightOne = h - closeDegree                                  //Getting the adjacent Hue
-        let hRightTwo = h - biggerDegree
-        
-        let hLeftOne = h + closeDegree
-        let hLeftTwo = h + biggerDegree
-        
-        let (rRightOne, gRightOne, bRightOne) = ColorConverter.hsvTorgb(h: hRightOne, s: s, l: l)
-        let (rRightTwo, gRightTwo, bRightTwo) = ColorConverter.hsvTorgb(h: hRightTwo, s: s, l: l)
-        
-        let (rLeftOne, gLeftOne, bLeftOne) = ColorConverter.hsvTorgb(h: hLeftOne, s: s, l: l)
-        let (rLeftTwo, gLeftTwo, bLeftTwo) = ColorConverter.hsvTorgb(h: hLeftTwo, s: s, l: l)
-
-        
-        assingColors(main: (Red,Green,Blue,l),
-                     rightOne: (rRightOne, gRightOne, bRightOne, l),
-                     rightTwo: (rRightTwo, gRightTwo, bRightTwo, l),
-                     leftOne: (rLeftOne, gLeftOne, bLeftOne, l),
-                     leftTwo: (rLeftTwo, gLeftTwo, bLeftTwo, l))
+        assingColors(main: (Red,Green,Blue,alpha),
+                     rightOne: (rightOne.r, rightOne.g, rightOne.b, alpha),
+                     rightTwo: (rightTwo.r, rightTwo.g, rightTwo.b, alpha),
+                     leftOne: (leftOne.r, leftOne.g, leftOne.b, alpha),
+                     leftTwo: (leftTwo.r, leftTwo.g, leftTwo.b, alpha))
         
     }
     
