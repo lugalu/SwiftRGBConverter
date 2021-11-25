@@ -16,17 +16,14 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
     @IBOutlet var cmky: [UITextField]!
     var colorDelegate: ColorUpdaterDelegate? = nil
     
-
-    /**
-        This method instantiates the textFieldhandler and configures the hexKeyboard
-        - Returns: Instance of TextField handler with the correct keyboard layout.
-     */
+    
+    
     static func instantiate() -> TextfieldHandler{
         let view: TextfieldHandler = initFromNib()
         view.setupHexKeyboard()
         return view
     }
-          
+    
     /**
      This method handles the overhaul configuration of each textfield
      it Includes the maximum amount of characters, Available characters, value range,and others
@@ -44,11 +41,11 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
         newText = newText.replacingOccurrences(of: ",", with: ".")
         switch textField {
             case textField where hex.contains(textField):
-
+               
                 maxChars = 2
                 allowedChars = "ABCDEF0123456789"
                 maxValue = 0
-                
+                print("I'm checking?")
                 return newText.count <= maxChars && newText == newText.filter(allowedChars?.contains ?? "".contains)
                 
             case textField where rgb1.contains(textField):
@@ -56,6 +53,7 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
                 maxChars = 3
                 maxValue = 1.0
                 guard let value = Double(newText) else { return false }
+                
                 if Double(value) > maxValue { return false}
                 
             case textField where rgb255.contains(textField):
@@ -86,15 +84,21 @@ class TextfieldHandler: UIView, UITextFieldDelegate{
   
 
     
-    /**
-        This instantiates a keyboard for each hex field.
-     */
+        
     func setupHexKeyboard(){
         for h in hex{
             guard let inputView = KeyboardView.instantiate(target: h) else{ fatalError("couldn't instantiate") }
+            
             h.inputView = inputView
+            
         }
     }
+ 
+    func setupKeyboardContraints(_ inputView: KeyboardView, textfield: UITextField) {
+
+    }
+    
+    
 }
 
 

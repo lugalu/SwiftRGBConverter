@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090A02AD274F1F4200FDA8FB /* ViewController + ColorUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A02AC274F1F4200FDA8FB /* ViewController + ColorUpdater.swift */; };
 		0978924726F81E2B007540F6 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978924626F81E2B007540F6 /* ImageView.swift */; };
 		0991BA2F2733698C004B24A8 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991BA2E2733698C004B24A8 /* KeyboardView.swift */; };
 		0991BA3027337166004B24A8 /* HexKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0991BA2C27335F4E004B24A8 /* HexKeyboard.xib */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		090A02AC274F1F4200FDA8FB /* ViewController + ColorUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + ColorUpdater.swift"; sourceTree = "<group>"; };
 		0978924626F81E2B007540F6 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		0991BA2C27335F4E004B24A8 /* HexKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HexKeyboard.xib; sourceTree = "<group>"; };
 		0991BA2E2733698C004B24A8 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				09FBE50D26CED64E00C60CD4 /* ColorPickerViewController.swift */,
 				09FBE51526CEF7C500C60CD4 /* CameraViewController.swift */,
 				09FBE50026C6EC0D00C60CD4 /* ViewController.swift */,
+				090A02AC274F1F4200FDA8FB /* ViewController + ColorUpdater.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				09FBE50126C6EC0D00C60CD4 /* ViewController.swift in Sources */,
 				09FBE50926CA9E2000C60CD4 /* TextFieldhandler + CMYK .swift in Sources */,
 				0978924726F81E2B007540F6 /* ImageView.swift in Sources */,
+				090A02AD274F1F4200FDA8FB /* ViewController + ColorUpdater.swift in Sources */,
 				099C882827405089004CAB85 /* ColorView.swift in Sources */,
 				09FBE51626CEF7C500C60CD4 /* CameraViewController.swift in Sources */,
 				09FBE50726CA9D7600C60CD4 /* TextFieldHandler + rgb255.swift in Sources */,

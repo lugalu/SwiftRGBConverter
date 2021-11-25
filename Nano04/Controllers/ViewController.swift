@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ColorUpdaterDelegate {
+class ViewController: UIViewController {
     
     var textfieldHandler: TextfieldHandler!
     var mainColor: ColorView!
@@ -121,39 +121,8 @@ class ViewController: UIViewController, ColorUpdaterDelegate {
         leftSide[1].setNewColor(newColor: .quaternaryLabel)
     }
     
-    
-    /**
-        This method is to conform with the ColorUpdaterDelegate, it updates the colors based on the current RGBA 1.0
-     */
-    func updateColorViewer(){
-        let Red: Double = Double(textfieldHandler.rgb1[0].text ?? "") ?? 0
-        let Green: Double = Double(textfieldHandler.rgb1[1].text ?? "") ?? 0
-        let Blue: Double = Double(textfieldHandler.rgb1[2].text ?? "") ?? 0
-        
-        let (alpha, rightOne, rightTwo, leftOne, leftTwo) = ColorConverter.calculateAnalogous(red: Red, green: Green, blue: Blue)
-        
-        assingColors(main: (Red,Green,Blue,alpha),
-                     rightOne: (rightOne.r, rightOne.g, rightOne.b, alpha),
-                     rightTwo: (rightTwo.r, rightTwo.g, rightTwo.b, alpha),
-                     leftOne: (leftOne.r, leftOne.g, leftOne.b, alpha),
-                     leftTwo: (leftTwo.r, leftTwo.g, leftTwo.b, alpha))
-        
-    }
-    
-    func updateColorViewer(color: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)) {
-     
-    }
-    
-    func updateColorViewer(color: UIColor) {
-    }
- 
-    func startColor() {
-        mainColor.setNewColor(newColor: UIColor(red: 1, green: 1, blue: 1, alpha: 1))
-        rightSide[0].setNewColor(newColor: UIColor(red: 0.909, green: 0.81, blue: 0.86, alpha: 1))
-        leftSide[0].setNewColor(newColor: UIColor(red: 0.909, green: 0.83, blue: 0.81, alpha: 1))
-        rightSide[1].setNewColor(newColor: UIColor(red: 1, green: 0.90, blue: 1, alpha: 1))
-        leftSide[1].setNewColor(newColor: UIColor(red: 1, green: 0.92, blue: 0.9, alpha: 1))
-    }
+
+
     
     
     func assingColors(main:(r: Double, g: Double, b: Double, a: Double),
