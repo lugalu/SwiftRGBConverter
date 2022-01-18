@@ -17,7 +17,7 @@ extension ColorConverter{
         var h: Double
         var s: Double
         let l: Double = cMax
-        
+       
         if delta == 0 {
             h = 0
             s = 0
@@ -46,9 +46,8 @@ extension ColorConverter{
                 h -= 1
             }
             
-
+            
         }
-        
         
         return (h,s,l)
     }
@@ -64,15 +63,15 @@ extension ColorConverter{
         - Returns: the normalized tuple
      */
     static func hsvTorgb(h:Double,s:Double,l:Double) -> (r:Double,g:Double,b:Double){
-        var (tempH, tempS, tempV) = normalizeHsv(hsv: (h,s,l))
+        let (tempH, tempS, tempV) = normalizeHsv(hsv: (h,s,l))
         
         let color = tempV * tempS
-        let x = color * (1 - abs( 1 - ((tempH/60).truncatingRemainder(dividingBy: 2))))
+        let x = color * (1 - abs( ((tempH/60).truncatingRemainder(dividingBy: 2)) - 1 ))
         let m = tempV - color
         
-        var tempR: Double = 1
-        var tempG: Double = 1
-        var tempB: Double = 1
+        var tempR: Double = 0
+        var tempG: Double = 0
+        var tempB: Double = 0
         
         switch tempH{
             case _ where tempH >= 0 && tempH < 60:
@@ -95,18 +94,17 @@ extension ColorConverter{
                 tempR = x
                 tempG = 0
                 tempB = color
-            case _ where tempH >= 300 && tempH < 360:
+            case _ where tempH >= 300 && tempH <= 360:
                 tempR = color
                 tempG = 0
                 tempB = x
             default:
-                print("error",tempH)
+                fatalError("some color killed the program \(tempR), \(tempG), \(tempB)")
         }
-        
+       
         tempR += m
         tempG += m
         tempB += m
-        
         return (tempR,tempG,tempB)
     }
     

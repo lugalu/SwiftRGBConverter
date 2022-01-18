@@ -18,7 +18,7 @@ class ColorView: UIView{
         view.backgroundColor = .clear
         view.layer.cornerRadius = 10
         view.createPath(shapePoints: points)
-        
+        //view.layer.compositingFilter = "normal"
         return view
     }
     
@@ -33,7 +33,7 @@ class ColorView: UIView{
     private func createPath(shapePoints: [CGPoint]){
         let trianglePath = UIBezierPath()
         trianglePath.lineJoinStyle = .round
-        trianglePath.lineWidth = 5
+        trianglePath.lineWidth = 2
         
                 
         trianglePath.move(to: shapePoints[0])
@@ -43,7 +43,6 @@ class ColorView: UIView{
                 trianglePath.addLine(to: point)
             }
         }
-        
         trianglePath.close()
         self.path = trianglePath
     }
@@ -51,6 +50,7 @@ class ColorView: UIView{
 
     func setNewColor(newColor: UIColor){
         self.color = newColor
+        //self.backgroundColor = newColor
         self.setNeedsDisplay()
     }
 }

@@ -16,8 +16,8 @@ extension ColorConverter{
                                                                                  leftTwo: (r:Double, g:Double, b:Double)){
         let (h,s,l) = ColorConverter.rgbToHSV(r: red, g: green, b: blue)
         
-        let closeDegree: Double = 20
-        let biggerDegree: Double = 35
+        let closeDegree: Double = 25
+        let biggerDegree: Double = 33
         
         let hRightOne = h - closeDegree                                  //Getting the adjacent Hue
         let hRightTwo = h - biggerDegree

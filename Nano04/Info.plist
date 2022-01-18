@@ -24,6 +24,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>By allowing the app to use the camera you can take photos to extract color data.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>By allowing the app access to photos you can use previous pictures to extract color data</string>
+	<key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
+	<true/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
