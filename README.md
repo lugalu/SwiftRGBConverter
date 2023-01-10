@@ -19,7 +19,7 @@ this is a great project to learn in and outs of Swift, but due to the fact it do
 would have to rewrite it just to be able to understand what's going on, I think it still is a great resource for some of
 the maths behind color conversion so I will be letting this for anyone who needs a few pointers in this direction.
 
-- Lugalu
+/- Lugalu
 
 Maybe in the future I will regain interest in this and finish the project.
 
